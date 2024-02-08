@@ -14,7 +14,7 @@ async function actualizar() {
 	const dbo = conexion.dbo("dws");
 
 	let filtro = {};
-	let valores = { $set: { centro: "Sol" } };
+	let valores = { $set: { centro: "Sol", edad: 21 } };
 	let resultado = await dbo.collection("alumno").updateOne(filtro, valores);
 	console.log(resultado);
 }
