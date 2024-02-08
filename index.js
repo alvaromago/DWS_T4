@@ -44,6 +44,27 @@ async function insertar() {
 	console.log("Datos insertados", resultado);
 }
 
+// Join
+async function consultaJoin() {
+	await conexion.connect();
+	const dbo = conexion.db("dws");
+
+	let resultado = await dbo
+		.collection("profesores")
+		.aggregate([
+			{
+				$lookup: {
+					from: "alumnos",
+					localField: "centro",
+					foreignField: "centro",
+					as: "alumnos",
+				},
+			},
+		])
+		.toArray();
+	console.log(resultado);
+}
+
 // Crear colección
 async function crearColeccion() {
 	await conexion.connect();
@@ -51,4 +72,13 @@ async function crearColeccion() {
 
 	let result = await dbo.createCollection("alumnos");
 	console.log("Colección creada: " + result.CollectionName);
+}
+
+// Eliminar colección
+async function eliminarColeccion() {
+	await conexion.connect();
+	const dbo = conexion.db("dws");
+
+	let result = await dbo.collection("profesores").drop();
+	console.log(result);
 }
