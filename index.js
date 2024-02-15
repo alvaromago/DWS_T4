@@ -1,5 +1,4 @@
 const { MongoClient } = require("mongodb");
-
 const urlConexion = "mongodb://127.0.0.1:27017";
 const conexion = new MongoClient(urlConexion);
 
