@@ -1,0 +1,27 @@
+[
+    {
+        "nombre": "Álvaro",
+        "apellidos": "Martín",
+        "nota": 10
+    },
+    {
+        "nombre": "Gonzalo",
+        "apellidos": "Cantos",
+        "nota": 6.75
+    },
+    {
+        "nombre": "Claudia",
+        "apellidos": "Palazón",
+        "nota": 9
+    },
+    {
+        "nombre": "Federico",
+        "apellidos": "Gómez",
+        "nota": 9.75
+    },
+    {
+        "nombre": "Jose Manuel",
+        "apellidos": "Prados",
+        "nota": 3
+    }
+]
